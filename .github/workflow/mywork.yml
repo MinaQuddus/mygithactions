@@ -1,0 +1,16 @@
+name: mywork
+on: push
+
+jobs:
+mywork:
+name: Lint code base
+runs-on: ubunto-latest
+steps:
+-name: Checkout code
+uses: actions/checkout@v2
+
+-name: Run mywork
+uses: github/mywork@v3
+env:
+DEFALT BRANCH: main
+GITHUB TOKEN: ${{secrets.GITHUB_TOKON }}
